@@ -53,7 +53,7 @@ int main(){
 	if(sid < 0){
 		exit(EXIT_FAILURE);
 	}
-	if((chdir("/")) < 0){
+	if((chdir("/home/rizqi/modul2")) < 0){
 		exit(EXIT_FAILURE);
 	}
 	close(STDIN_FILENO);
@@ -199,7 +199,7 @@ int main(){
 				exit(EXIT_FAILURE);
 			}
 			if(child_id6 == 0){
-				char *argv[] = {"zip","-rm","-q","Lopyu_Stevany","/home/rizqi/modul2/Musyik","/home/rizqi/modul2/Pyoto","/home/rizqi/modul2/Fylm",NULL};
+				char *argv[] = {"zip","-rmq","Lopyu_Stevany","Musyik","Pyoto","Fylm",NULL};
 				execv("/bin/zip",argv);
 			}
 			else{
