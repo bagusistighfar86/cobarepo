@@ -211,8 +211,12 @@ Di proses ini terdapat fork. Di parent proses akan mengingatkan child proses set
 "wget -q" agar proses silent dan tidak mengeluarkan output pada terminal
 "wget -O" untuk mendownload gambar sekaligus dengan path dan rename filenya
 
+Output :
+
+[![1619324066306.jpg](https://i.postimg.cc/TP4VdwXs/1619324066306.jpg)](https://postimg.cc/TynLQT1j)
+
 ### Soal 3c
-Pada soal ini, diperintahkan untuk membuat status.txt dengan isi "Download Succes" yang telah dienkripsi dengan algoritma CaesarChiper key 5. 
+Pada soal ini, diperintahkan untuk membuat status.txt dengan isi "Download Succes" yang telah dienkripsi dengan algoritma CaesarChiper key 5. Lalu kemudian zip setiap folder yang memiliki file yang telah didownload, lalu hapus directory/folder aslinya 
 ```c
 char pesan[100] = "Download Succes";
 caesarchiper(pesan, 5);
@@ -252,6 +256,24 @@ char *caesarchiper(char *message, int key){
 ```
 Pada algoritma ini intinya mengubah suatu huruf menjadi huruf+key. Misal A dengan key 5 maka huruf A tersebut menjadi F. Jika huruf telah melewati z atau Z maka rumusnya 
 ch = ch - z + a - 1 atau ch = ch - Z + A - 1
+
+Bagian untuk zip dan remove filenya 
+```c
+char nama_zip[150];
+sprintf(nama_zip,"%s.zip",nama_folder);
+char *arg_zip[] = {"zip", "-rm", "-q", nama_zip, nama_folder, NULL};
+execv("/usr/bin/zip", arg_zip);
+```
+"zip -rm" membuat zip melalui path dan langsung rename file, serta menghapus direktori aslinya
+"zip -q" agar proses silent dan tidak mengeluarkan output pada terminal
+
+Output :
+
+[![1619324079821.jpg](https://i.postimg.cc/nL8SH0Y7/1619324079821.jpg)](https://postimg.cc/LJT3DkW6)
+
+[![1619323956640.jpg](https://i.postimg.cc/NM215csj/1619323956640.jpg)](https://postimg.cc/TLGy4B5z)
+
+[![1619324116320.jpg](https://i.postimg.cc/1XxDFjXc/1619324116320.jpg)](https://postimg.cc/YG34K81h)
 
 ### Soal 3d
 Pada soal ini, diperintahkan untuk membuat killer bash script melalui program c ini. killer ini digunakan untuk terminate daemon prosesnya sesuai dengan argumen yang diinputkan pada argz.  
