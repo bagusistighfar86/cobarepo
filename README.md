@@ -3,6 +3,7 @@
 Mekanisme fork soal ini : 
 
 [![0001-1.jpg](https://i.postimg.cc/ncZzNJDf/0001-1.jpg)](https://postimg.cc/bdCp24gm)
+
 Full Source Code :
 ```c
 #include <sys/types.h>
