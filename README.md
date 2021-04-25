@@ -1,6 +1,7 @@
 # cobarepo
 ## Soal 3
 Mekanisme fork soal ini : 
+
 [![0001-1.jpg](https://i.postimg.cc/ncZzNJDf/0001-1.jpg)](https://postimg.cc/bdCp24gm)
 Full Source Code :
 ```c
@@ -275,6 +276,9 @@ void killer_script(char const *argv[], int pid){
 
 Error pada soal no 3 :
 1. Salah syntax strftime
+
 [![1618586017899.jpg](https://i.postimg.cc/L4ZSD0QK/1618586017899.jpg)](https://postimg.cc/QVsvxSr0)
+
 2. Pembuatan folder tidak berlangsung setiap 40s, melainkan setiap 50s atau dengan kata lain setiap seluruh proses download selesai
+
 [![1618593087293.jpg](https://i.postimg.cc/wvyCW7Vc/1618593087293.jpg)](https://postimg.cc/TLxN12Bp)
